@@ -23,41 +23,78 @@ export default class Form extends React.Component {
 
   render() {
     return(
-      <form className="resty-form" onSubmit={this.submitForm}>
-        <input type="text" name="url" onChange={this.handleFormInput}></input>
+      <form
+        className = "resty-form"
+        onSubmit = {this.submitForm}
+      >
+        <input 
+          type = "text"
+          name = "url"
+          onChange = {this.handleFormInput}
+          placeholder = "URL"
+        />
         <ul>
           <li>
             <label>
-              <input type="radio" name="method" value="get" onChange={this.handleFormInput}/>
+              <input
+                type = "radio"
+                name = "method"
+                value = "get"
+                onChange = {this.handleFormInput}
+              />
               GET
             </label>
           </li>
           <li>
             <label>
-              <input type="radio" name="method" value="post" onChange={this.handleFormInput}/>
+              <input
+                type = "radio"
+                name = "method"
+                value = "post"
+                onChange = {this.handleFormInput}
+              />
               POST
             </label>
           </li>
           <li>
             <label>
-              <input type="radio" name="method" value="put" onChange={this.handleFormInput}/>
+              <input
+                type = "radio"
+                name = "method"
+                value = "put"
+                onChange = {this.handleFormInput}
+              />
               PUT
             </label>
           </li>
           <li>
             <label>
-              <input type="radio" name="method" value="patch" onChange={this.handleFormInput}/>
+              <input
+                type = "radio"
+                name = "method"
+                value = "patch"
+                onChange = {this.handleFormInput}
+              />
               PATCH
             </label>
           </li>
           <li>
             <label>
-              <input type="radio" name="method" value="delete" onChange={this.handleFormInput}/>
+              <input
+                type = "radio"
+                name = "method"
+                value = "delete"
+                onChange = {this.handleFormInput}
+              />
               DELETE
             </label>
           </li>
         </ul>
-        <textarea name="jsonInput" onChange={this.handleFormInput}></textarea>
+        <textarea
+          name = "jsonInput"
+          onChange = {this.handleFormInput}
+          placeholder = "JSON body" 
+        />
         <button type="submit">Send</button>
       </form>
     );
